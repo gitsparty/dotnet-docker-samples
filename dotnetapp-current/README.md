@@ -32,7 +32,7 @@ docker run dotnetapp
 ```
 
 Follow these steps to run this sample in a  Windows container.
-Note: Before doing the follwing, make sure you are running in "Windows Container" mode. You can do this by Right Clicking the Docker app -> "Switch to Windows Containers".
+Note: Before doing the follwing, make sure you are running in "Windows Container" mode. You can do this by Right Clicking the Docker app (in the System Tray) -> "Switch to Windows Containers".
 
 ```console
 dotnet restore
