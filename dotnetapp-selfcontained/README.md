@@ -70,8 +70,13 @@ docker run dotnetapp
 Notes
 -----
 
-Self-contained applications are very similar to framework-dependent applications from a source code perspective. They only differ in terms of their reference to the .NET Core metapackage. Framework-dependent applications include a `"type": "platform"' property and standalone apps do not. The commands used to publish both apps are the same.
+Self-contained applications are very similar to framework-dependent applications from a source code perspective. 
+
+However from a runtime perspective, framework-dependent applications require the framework to be pre-installed on the machine, while self-contained applications include the entire framework in their deployment package. Both approaches have their obvious PROS and CONS.
 
 Self-contained apps are operating system- and chip-specific after they are published. The -r argument instructs the publish command to select the correct native assets to include. See [.NET Core Runtime IDentifier (RID) catalog](https://docs.microsoft.com/dotnet/articles/core/rid-catalog) for more information. 
 
-The `runtimes` node in project.json lists the suppored RIDs for a given app. A large set is listed in this sample to enable it to be uses on multiple operating systems. 
+The `runtimes` on which the app can run are listed in the RuntimeIdentifiers property in the CSPROJ. A large set is listed in this sample to enable it to be uses on multiple operating systems. For all possible runtime identifiers, see [.NET Core Runtime IDentifier (RID) catalog](https://docs.microsoft.com/dotnet/articles/core/rid-catalog).
+
+
+
