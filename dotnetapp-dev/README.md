@@ -26,12 +26,13 @@ Follow these steps to run this sample in a Linux container:
 
 ```console
 docker build -t dotnetapp .
-docker run dotnetapp Hello .NET Core from Docker
+docker run dotnetapp
 ```
 
-Follow these steps to run this sample in a  Windows container:
+Follow these steps to run this sample in a  Windows container.
+Note: Before doing the follwing, make sure you are running in "Windows Container" mode. You can do this by Right Clicking the Docker app -> "Switch to Windows Containers".
 
 ```console
 docker build -t dotnetapp -f Dockerfile.nano .
-docker run dotnetapp Hello .NET Core from Docker
+docker run dotnetapp
 ```

@@ -19,7 +19,7 @@ Follow these steps to run the sample locally:
 
 ```console
 dotnet restore
-dotnet run Hello .NET Core from Docker
+dotnet run
 ```
 
 Follow these steps to build and run the sample locally as a self-contained app on Linux:
@@ -54,16 +54,17 @@ Follow these steps to run this sample in a Linux container:
 dotnet restore
 dotnet publish -c Release -o out -r debian.8-x64
 docker build -t dotnetapp .
-docker run dotnetapp Hello .NET Core from Docker
+docker run dotnetapp
 ```
 
 Follow these steps to run this sample in a  Windows container:
+Note: Before doing the follwing, make sure you are running in "Windows Container" mode. You can do this by Right Clicking the Docker app -> "Switch to Windows Containers".
 
 ```console
 dotnet restore
 dotnet publish -c Release -o out -r win7-x64
 docker build -t dotnetapp -f Dockerfile.nano .
-docker run dotnetapp Hello .NET Core from Docker
+docker run dotnetapp
 ```
 
 Notes
